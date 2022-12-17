@@ -102,22 +102,7 @@ public class Vehiculo {
             return false;
         }
         final Vehiculo other = (Vehiculo) obj;
-        if (this.matricula != other.matricula) {
-            return false;
-        }
-        if (this.disponible != other.disponible) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.tarifa) != Double.doubleToLongBits(other.tarifa)) {
-            return false;
-        }
-        if (!Objects.equals(this.bastidor, other.bastidor)) {
-            return false;
-        }
-        if (this.color != other.color) {
-            return false;
-        }
-        return this.modelo == other.modelo;
+        return Objects.equals(this.bastidor, other.bastidor);
     }
 
     @Override
